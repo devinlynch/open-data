@@ -1,0 +1,335 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'update', 'mysql' ]
+2 info using npm@1.3.8
+3 info using node@v0.10.18
+4 verbose cache add [ 'mysql', '*' ]
+5 verbose cache add name="mysql" spec="*" args=["mysql","*"]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: '*',
+6 verbose parsed url   path: '*',
+6 verbose parsed url   href: '*' }
+7 verbose addNamed [ 'mysql', '*' ]
+8 verbose addNamed [ null, '*' ]
+9 silly lockFile 68913812-mysql mysql@*
+10 verbose lock mysql@* /Users/devinlynch/.npm/68913812-mysql.lock
+11 verbose cache add [ 'mysql', '>=0.9.5' ]
+12 verbose cache add name="mysql" spec=">=0.9.5" args=["mysql",">=0.9.5"]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: '%3E=0.9.5',
+13 verbose parsed url   path: '%3E=0.9.5',
+13 verbose parsed url   href: '%3E=0.9.5' }
+14 verbose addNamed [ 'mysql', '>=0.9.5' ]
+15 verbose addNamed [ null, '>=0.9.5' ]
+16 silly lockFile 460e9511-mysql-0-9-5 mysql@>=0.9.5
+17 verbose lock mysql@>=0.9.5 /Users/devinlynch/.npm/460e9511-mysql-0-9-5.lock
+18 verbose cache add [ 'mysql', '=0.9.4' ]
+19 verbose cache add name="mysql" spec="=0.9.4" args=["mysql","=0.9.4"]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: '=0.9.4',
+20 verbose parsed url   path: '=0.9.4',
+20 verbose parsed url   href: '=0.9.4' }
+21 verbose addNamed [ 'mysql', '=0.9.4' ]
+22 verbose addNamed [ null, '=0.9.4' ]
+23 silly lockFile e8baf567-mysql-0-9-4 mysql@=0.9.4
+24 verbose lock mysql@=0.9.4 /Users/devinlynch/.npm/e8baf567-mysql-0-9-4.lock
+25 silly addNameRange { name: 'mysql', range: '>=0.9.5', hasData: false }
+26 silly addNameRange { name: 'mysql', range: '*', hasData: false }
+27 verbose url raw mysql
+28 verbose url resolving [ 'https://registry.npmjs.org/', './mysql' ]
+29 verbose url resolved https://registry.npmjs.org/mysql
+30 info trying registry request attempt 1 at 22:08:43
+31 http GET https://registry.npmjs.org/mysql
+32 verbose url raw mysql
+33 verbose url resolving [ 'https://registry.npmjs.org/', './mysql' ]
+34 verbose url resolved https://registry.npmjs.org/mysql
+35 info trying registry request attempt 1 at 22:08:43
+36 http GET https://registry.npmjs.org/mysql
+37 verbose url raw mysql/0.9.4
+38 verbose url resolving [ 'https://registry.npmjs.org/', './mysql/0.9.4' ]
+39 verbose url resolved https://registry.npmjs.org/mysql/0.9.4
+40 info trying registry request attempt 1 at 22:08:43
+41 verbose etag "B2MHW5G5822JJHHGHGB3K5KTV"
+42 http GET https://registry.npmjs.org/mysql/0.9.4
+43 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+44 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+45 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+46 info trying registry request attempt 2 at 22:08:53
+47 http GET https://registry.npmjs.org/mysql
+48 info trying registry request attempt 2 at 22:08:53
+49 http GET https://registry.npmjs.org/mysql
+50 info trying registry request attempt 2 at 22:08:53
+51 verbose etag "B2MHW5G5822JJHHGHGB3K5KTV"
+52 http GET https://registry.npmjs.org/mysql/0.9.4
+53 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+54 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+55 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+56 info trying registry request attempt 3 at 22:09:53
+57 http GET https://registry.npmjs.org/mysql
+58 info trying registry request attempt 3 at 22:09:53
+59 http GET https://registry.npmjs.org/mysql
+60 info trying registry request attempt 3 at 22:09:53
+61 verbose etag "B2MHW5G5822JJHHGHGB3K5KTV"
+62 http GET https://registry.npmjs.org/mysql/0.9.4
+63 silly registry.get cb [ 304, undefined ]
+64 verbose etag mysql/0.9.4 from cache
+65 silly lockFile 68913812-mysql mysql@*
+66 silly lockFile 68913812-mysql mysql@*
+67 silly lockFile 460e9511-mysql-0-9-5 mysql@>=0.9.5
+68 silly lockFile 460e9511-mysql-0-9-5 mysql@>=0.9.5
+69 silly lockFile e8baf567-mysql-0-9-4 mysql@=0.9.4
+70 silly lockFile e8baf567-mysql-0-9-4 mysql@=0.9.4
+71 info outdated updating [ [ '/Users/devinlynch/open-data/node_modules/connect-mysql-session/node_modules/sequelize',
+71 info outdated     'mysql',
+71 info outdated     '0.9.4',
+71 info outdated     '0.9.4',
+71 info outdated     '=0.9.4' ] ]
+72 verbose install where,what [ '/Users/devinlynch/open-data/node_modules/connect-mysql-session/node_modules/sequelize',
+72 verbose install   [ 'mysql@0.9.4' ] ]
+73 verbose readDependencies using package.json deps
+74 verbose cache add [ 'mysql@0.9.4', null ]
+75 verbose cache add name=undefined spec="mysql@0.9.4" args=["mysql@0.9.4",null]
+76 verbose parsed url { protocol: null,
+76 verbose parsed url   slashes: null,
+76 verbose parsed url   auth: null,
+76 verbose parsed url   host: null,
+76 verbose parsed url   port: null,
+76 verbose parsed url   hostname: null,
+76 verbose parsed url   hash: null,
+76 verbose parsed url   search: null,
+76 verbose parsed url   query: null,
+76 verbose parsed url   pathname: 'mysql@0.9.4',
+76 verbose parsed url   path: 'mysql@0.9.4',
+76 verbose parsed url   href: 'mysql@0.9.4' }
+77 verbose cache add name="mysql" spec="0.9.4" args=["mysql","0.9.4"]
+78 verbose parsed url { protocol: null,
+78 verbose parsed url   slashes: null,
+78 verbose parsed url   auth: null,
+78 verbose parsed url   host: null,
+78 verbose parsed url   port: null,
+78 verbose parsed url   hostname: null,
+78 verbose parsed url   hash: null,
+78 verbose parsed url   search: null,
+78 verbose parsed url   query: null,
+78 verbose parsed url   pathname: '0.9.4',
+78 verbose parsed url   path: '0.9.4',
+78 verbose parsed url   href: '0.9.4' }
+79 verbose addNamed [ 'mysql', '0.9.4' ]
+80 verbose addNamed [ '0.9.4', '0.9.4' ]
+81 silly lockFile 90b9fe94-mysql-0-9-4 mysql@0.9.4
+82 verbose lock mysql@0.9.4 /Users/devinlynch/.npm/90b9fe94-mysql-0-9-4.lock
+83 verbose registry.get mysql/0.9.4 not expired, no request
+84 silly lockFile 90b9fe94-mysql-0-9-4 mysql@0.9.4
+85 silly lockFile 90b9fe94-mysql-0-9-4 mysql@0.9.4
+86 silly resolved [ { name: 'mysql',
+86 silly resolved     version: '0.9.4',
+86 silly resolved     author:
+86 silly resolved      { name: 'Felix Geisendörfer',
+86 silly resolved        email: 'felix@debuggable.com',
+86 silly resolved        url: 'http://debuggable.com/' },
+86 silly resolved     description: 'A pure node.js JavaScript Client implementing the MySQL protocol.',
+86 silly resolved     homepage: 'https://github.com/felixge/node-mysql',
+86 silly resolved     repository: { type: 'git', url: 'git://github.com/felixge/node-mysql.git' },
+86 silly resolved     main: './index',
+86 silly resolved     scripts: { test: 'make test' },
+86 silly resolved     dependencies: { hashish: '0.0.4' },
+86 silly resolved     devDependencies: { gently: '0.8.0', far: '0.0.6', 'fast-or-slow': '0.0.5' },
+86 silly resolved     engines: { node: '*' },
+86 silly resolved     readme: '# node-mysql\n\n## Purpose\n\nA pure node.js JavaScript Client implementing the [MySQL protocol](http://forge.mysql.com/wiki/MySQL_Internals_ClientServer_Protocol).\n\n## Support this module\n\nIf you like this module, check out and spread the word about our service\n[transloadit.com][]. We provide file uploading and encoding functionality to\nother applications, and have performed billions of queries with this module so\nfar.\n\n[transloadit.com]: http://transloadit.com/\n\n## Installation\n\n```\nnpm install mysql\n```\n\n**Important**: If you are upgrading from 0.9.1 or below, there have been\nbackwards incompatible changes in the API. Please read the [upgrading guide][].\n\n[upgrading guide]: https://github.com/felixge/node-mysql/wiki/Upgrading-to-0.9.2+\n\n## Usage\n\n``` javascript\nvar mysql = require(\'mysql\');\nvar TEST_DATABASE = \'nodejs_mysql_test\';\nvar TEST_TABLE = \'test\';\nvar client = mysql.createClient({\n  user: \'root\',\n  password: \'root\',\n});\n\nclient.query(\'CREATE DATABASE \'+TEST_DATABASE, function(err) {\n  if (err && err.number != mysql.ERROR_DB_CREATE_EXISTS) {\n    throw err;\n  }\n});\n\n// If no callback is provided, any errors will be emitted as `\'error\'`\n// events by the client\nclient.query(\'USE \'+TEST_DATABASE);\n\nclient.query(\n  \'CREATE TEMPORARY TABLE \'+TEST_TABLE+\n  \'(id INT(11) AUTO_INCREMENT, \'+\n  \'title VARCHAR(255), \'+\n  \'text TEXT, \'+\n  \'created DATETIME, \'+\n  \'PRIMARY KEY (id))\'\n);\n\nclient.query(\n  \'INSERT INTO \'+TEST_TABLE+\' \'+\n  \'SET title = ?, text = ?, created = ?\',\n  [\'super cool\', \'this is a nice text\', \'2010-08-16 10:00:23\']\n);\n\nvar query = client.query(\n  \'INSERT INTO \'+TEST_TABLE+\' \'+\n  \'SET title = ?, text = ?, created = ?\',\n  [\'another entry\', \'because 2 entries make a better test\', \'2010-08-16 12:42:15\']\n);\n\nclient.query(\n  \'SELECT * FROM \'+TEST_TABLE,\n  function selectCb(err, results, fields) {\n    if (err) {\n      throw err;\n    }\n\n    console.log(results);\n    console.log(fields);\n    client.end();\n  }\n);\n```\n\n## API\n\n### mysql.createClient([options])\n\nCreates a new client instance. Any client property can be set using the\n`options` object.\n\n### client.host = \'localhost\'\n\nThe host to connect to.\n\n### client.port = 3306\n\nThe port to connect to.\n\n### client.user = null\n\nThe username to authenticate as.\n\n### client.password = null\n\nThe password to use.\n\n### client.database = null\n\nThe name of the database to connect to (optional).\n\n### client.debug = false\n\nPrints incoming and outgoing packets, useful for development / testing purposes.\n\n### client.flags = Client.defaultFlags\n\nConnection flags send to the server.\n\n### client.query(sql, [params, cb])\n\nSends a `sql` query to the server. `\'?\'` characters can be used as placeholders\nfor an array of `params` that will be safely escaped before sending the final\nquery.\n\nThis method returns a `Query` object which can be used to stream incoming row\ndata.\n\n**Warning:** `sql` statements with multiple queries separated by semicolons\nare not supported yet.\n\n### client.ping([cb])\n\nSends a ping command to the server.\n\n### client.useDatabase(database, [cb])\n\nSame as issuing a `\'USE <database>\'` query.\n\n### client.statistics([cb])\n\nReturns some server statistics provided by MySql.\n\n### client.format(sql, params)\n\nAllows to safely insert a list of `params` into a `sql` string using the\nplaceholder mechanism described above.\n\n### client.escape(val)\n\nEscapes a single `val` for use inside of a sql string.\n\n### client.destroy([cb])\n\nForces the client connection to be destroyed right away. This is not a\nnice way to terminate the connection, use with caution.\n\n### client.end([cb])\n\nSchedule a COM_QUIT packet for closing the connection. All currently queued\nqueries will still execute before the graceful termination of the connection\nis attempted.\n\n### client event: \'error\' (err)\n\nWhen the client has no callback / delegate for an error, it is emitted with this\nevent instead.\n\n### new mysql.Query()\n\nQuery objects are not meant to be invoked manually. To get a query object, use\nthe `client.query` API.\n\n### query event: \'error\' (err)\n\nEmitted when mysql returns an error packet for the query.\n\n### query event: \'field\' (field)\n\nEmitted upon receiving a field packet from mysql.\n\n### query event: \'row\' (row)\n\nEmitted upon receiving a row. An option for streaming the contents of the row\nitself will be made available soon.\n\n### query event: \'end\' ([result])\n\nEmitted once the query is finished. In case there is no result set, a `result`\nparameter is provided which contains the information from the mysql OK packet.\n\n## FAQ\n\n### How do I compile this module?\n\nThis module is written entirely in JavaScript. There is no dependency on external\nC libraries such as libmysql. That means you don\'t have to compile this module\nat all.\n\n### How can I retrieve the id from the last inserted record?\n\n    client.query(\'INSERT INTO my_table SET title = ?\', function(err, info) {\n      console.log(info.insertId);\n    });\n\n## Todo\n\nAt this point the module is ready to be tried out, but a lot of things are yet to be done:\n\n* Implement retry\n* Pause / resume\n* Remaining mysql commands\n* Prepared Statements\n* Packet\'s > 16 MB\n* Compression\n* Decide how to handle queries with multiple statements\n\n## Contributors\n\n[Click here][contributors] for a full list of contributors.\n\n[contributors]: https://github.com/felixge/node-mysql/contributors\n\n## Sponsors\n\n* [Joyent](http://www.joyent.com/) - Main sponsor, you should check out their [node.js hosting](https://no.de/).\n* [pinkbike.com](http://pinkbike.com/) - The most awesome biking site there is\n\nThis is a rather large project requiring a significant amount of my limited resources.\n\nIf your company could benefit from a well-engineered non-blocking mysql driver, and\nwants to support this project, I would greatly appriciate any sponsorship you may be\nable to provide. All sponsors will get lifetime display in this readme, priority\nsupport on problems, and votes on roadmap decisions. If you are interested, contact\nme at [felix@debuggable.com](mailto:felix@debuggable.com) for details.\n\nOf course I\'m also happy about code contributions. If you\'re interested in\nworking on features, just get in touch so we can talk about API design and\ntesting.\n\n[transloadit]: http://transloadit.com/\n\n## Changelog\n\n### v0.9.2\n\n* The underlaying socket connection is now managed implicitly rather than explicitly.\n* Check the [upgrading guide][] for a full list of changes.\n\n### v0.9.1\n\n* Fix issue #49 / `client.escape()` throwing exceptions on objects. (Nick Payne)\n* Drop < v0.4.x compatibility. From now on you need node v0.4.x to use this module.\n\n### Older releases\n\nThese releases were done before starting to maintain the above Changelog:\n\n* [v0.9.0](https://github.com/felixge/node-mysql/compare/v0.8.0...v0.9.0)\n* [v0.8.0](https://github.com/felixge/node-mysql/compare/v0.7.0...v0.8.0)\n* [v0.7.0](https://github.com/felixge/node-mysql/compare/v0.6.0...v0.7.0)\n* [v0.6.0](https://github.com/felixge/node-mysql/compare/v0.5.0...v0.6.0)\n* [v0.5.0](https://github.com/felixge/node-mysql/compare/v0.4.0...v0.5.0)\n* [v0.4.0](https://github.com/felixge/node-mysql/compare/v0.3.0...v0.4.0)\n* [v0.3.0](https://github.com/felixge/node-mysql/compare/v0.2.0...v0.3.0)\n* [v0.2.0](https://github.com/felixge/node-mysql/compare/v0.1.0...v0.2.0)\n* [v0.1.0](https://github.com/felixge/node-mysql/commits/v0.1.0)\n\n## License\n\nnode-mysql is licensed under the MIT license.\n',
+86 silly resolved     readmeFilename: 'Readme.md',
+86 silly resolved     bugs: { url: 'https://github.com/felixge/node-mysql/issues' },
+86 silly resolved     _id: 'mysql@0.9.4',
+86 silly resolved     _from: 'mysql@0.9.4' } ]
+87 info install mysql@0.9.4 into /Users/devinlynch/open-data/node_modules/connect-mysql-session/node_modules/sequelize
+88 info installOne mysql@0.9.4
+89 info /Users/devinlynch/open-data/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/mysql unbuild
+90 info preuninstall mysql@0.9.4
+91 info uninstall mysql@0.9.4
+92 verbose false,/Users/devinlynch/open-data/node_modules,/Users/devinlynch/open-data/node_modules/connect-mysql-session/node_modules/sequelize/node_modules unbuild mysql@0.9.4
+93 info postuninstall mysql@0.9.4
+94 verbose tar unpack /Users/devinlynch/.npm/mysql/0.9.4/package.tgz
+95 silly lockFile 7153cde7-les-sequelize-node-modules-mysql tar:///Users/devinlynch/open-data/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/mysql
+96 verbose lock tar:///Users/devinlynch/open-data/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/mysql /Users/devinlynch/.npm/7153cde7-les-sequelize-node-modules-mysql.lock
+97 silly lockFile d842e022-ynch-npm-mysql-0-9-4-package-tgz tar:///Users/devinlynch/.npm/mysql/0.9.4/package.tgz
+98 verbose lock tar:///Users/devinlynch/.npm/mysql/0.9.4/package.tgz /Users/devinlynch/.npm/d842e022-ynch-npm-mysql-0-9-4-package-tgz.lock
+99 silly gunzTarPerm modes [ '755', '644' ]
+100 silly gunzTarPerm extractEntry package.json
+101 silly gunzTarPerm extractEntry .npmignore
+102 silly gunzTarPerm extractEntry index.js
+103 silly gunzTarPerm extractEntry License
+104 silly gunzTarPerm extractEntry Makefile
+105 silly gunzTarPerm extractEntry Readme.md
+106 silly gunzTarPerm extractEntry benchmark/node-mysql/insert.js
+107 silly gunzTarPerm extractEntry benchmark/node-mysql/select.js
+108 silly gunzTarPerm extractEntry benchmark/php/insert-select.php
+109 silly gunzTarPerm extractEntry lib/auth.js
+110 silly gunzTarPerm extractEntry lib/client.js
+111 silly gunzTarPerm extractEntry lib/constants.js
+112 silly gunzTarPerm extractEntry lib/mysql.js
+113 silly gunzTarPerm extractEntry lib/outgoing_packet.js
+114 silly gunzTarPerm extractEntry lib/parser.js
+115 silly gunzTarPerm extractEntry lib/query.js
+116 silly gunzTarPerm extractEntry test/common.js
+117 silly gunzTarPerm extractEntry test/config.template.js
+118 silly gunzTarPerm extractEntry test/run.js
+119 silly gunzTarPerm extractEntry test/fast/test-client.js
+120 silly gunzTarPerm extractEntry test/fast/test-mysql.js
+121 silly gunzTarPerm extractEntry test/fixture/columnia.sql
+122 silly gunzTarPerm extractEntry test/fixture/libmysql_password.c
+123 silly gunzTarPerm extractEntry test/legacy/common.js
+124 silly gunzTarPerm extractEntry test/legacy/simple/test-auth.js
+125 silly gunzTarPerm extractEntry test/legacy/simple/test-client.js
+126 silly gunzTarPerm extractEntry test/legacy/simple/test-outgoing-packet.js
+127 silly gunzTarPerm extractEntry test/legacy/simple/test-parser.js
+128 silly gunzTarPerm extractEntry test/legacy/simple/test-query.js
+129 silly gunzTarPerm extractEntry test/slow/test-client-commands.js
+130 silly gunzTarPerm extractEntry test/slow/test-client-connect.js
+131 silly gunzTarPerm extractEntry test/slow/test-client-max-connections.js
+132 silly gunzTarPerm extractEntry test/slow/test-client-query-column-ordering.js
+133 silly gunzTarPerm extractEntry test/slow/test-client-query-error-handling.js
+134 silly gunzTarPerm extractEntry test/slow/test-client-query.js
+135 silly gunzTarPerm extractEntry tool/pcap-mysql.js
+136 silly lockFile 7153cde7-les-sequelize-node-modules-mysql tar:///Users/devinlynch/open-data/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/mysql
+137 silly lockFile 7153cde7-les-sequelize-node-modules-mysql tar:///Users/devinlynch/open-data/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/mysql
+138 silly lockFile d842e022-ynch-npm-mysql-0-9-4-package-tgz tar:///Users/devinlynch/.npm/mysql/0.9.4/package.tgz
+139 silly lockFile d842e022-ynch-npm-mysql-0-9-4-package-tgz tar:///Users/devinlynch/.npm/mysql/0.9.4/package.tgz
+140 info preinstall mysql@0.9.4
+141 verbose readDependencies using package.json deps
+142 verbose readDependencies using package.json deps
+143 verbose cache add [ 'hashish@0.0.4', null ]
+144 verbose cache add name=undefined spec="hashish@0.0.4" args=["hashish@0.0.4",null]
+145 verbose parsed url { protocol: null,
+145 verbose parsed url   slashes: null,
+145 verbose parsed url   auth: null,
+145 verbose parsed url   host: null,
+145 verbose parsed url   port: null,
+145 verbose parsed url   hostname: null,
+145 verbose parsed url   hash: null,
+145 verbose parsed url   search: null,
+145 verbose parsed url   query: null,
+145 verbose parsed url   pathname: 'hashish@0.0.4',
+145 verbose parsed url   path: 'hashish@0.0.4',
+145 verbose parsed url   href: 'hashish@0.0.4' }
+146 verbose cache add name="hashish" spec="0.0.4" args=["hashish","0.0.4"]
+147 verbose parsed url { protocol: null,
+147 verbose parsed url   slashes: null,
+147 verbose parsed url   auth: null,
+147 verbose parsed url   host: null,
+147 verbose parsed url   port: null,
+147 verbose parsed url   hostname: null,
+147 verbose parsed url   hash: null,
+147 verbose parsed url   search: null,
+147 verbose parsed url   query: null,
+147 verbose parsed url   pathname: '0.0.4',
+147 verbose parsed url   path: '0.0.4',
+147 verbose parsed url   href: '0.0.4' }
+148 verbose addNamed [ 'hashish', '0.0.4' ]
+149 verbose addNamed [ '0.0.4', '0.0.4' ]
+150 silly lockFile 2f8e09bc-hashish-0-0-4 hashish@0.0.4
+151 verbose lock hashish@0.0.4 /Users/devinlynch/.npm/2f8e09bc-hashish-0-0-4.lock
+152 verbose url raw hashish/0.0.4
+153 verbose url resolving [ 'https://registry.npmjs.org/', './hashish/0.0.4' ]
+154 verbose url resolved https://registry.npmjs.org/hashish/0.0.4
+155 info trying registry request attempt 1 at 22:09:54
+156 verbose etag "ABYASULDW0NLO55BJ0DRW8VUJ"
+157 http GET https://registry.npmjs.org/hashish/0.0.4
+158 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+159 info trying registry request attempt 2 at 22:10:04
+160 verbose etag "ABYASULDW0NLO55BJ0DRW8VUJ"
+161 http GET https://registry.npmjs.org/hashish/0.0.4
+162 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+163 info trying registry request attempt 3 at 22:11:04
+164 verbose etag "ABYASULDW0NLO55BJ0DRW8VUJ"
+165 http GET https://registry.npmjs.org/hashish/0.0.4
+166 http 200 https://registry.npmjs.org/hashish/0.0.4
+167 silly registry.get cb [ 200,
+167 silly registry.get   { date: 'Sat, 01 Mar 2014 03:10:54 GMT',
+167 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B)',
+167 silly registry.get     etag: '"2JSS3OJURFPXC5M9KG1V7UOME"',
+167 silly registry.get     'content-type': 'application/json',
+167 silly registry.get     via: '1.1 varnish',
+167 silly registry.get     'cache-control': 'max-age=1',
+167 silly registry.get     'content-length': '802',
+167 silly registry.get     'accept-ranges': 'bytes',
+167 silly registry.get     age: '3995',
+167 silly registry.get     'x-served-by': 'cache-v43-ASH, cache-c100-CHI',
+167 silly registry.get     'x-cache': 'MISS, MISS',
+167 silly registry.get     'x-cache-hits': '0, 0',
+167 silly registry.get     'x-timer': 'S1393639348.957126856,VS0,VS-6,VE77,VE4105682',
+167 silly registry.get     vary: 'Accept',
+167 silly registry.get     'keep-alive': 'timeout=10, max=50',
+167 silly registry.get     connection: 'Keep-Alive' } ]
+168 silly lockFile ec67f10f-js-org-hashish-hashish-0-0-4-tgz https://registry.npmjs.org/hashish/-/hashish-0.0.4.tgz
+169 verbose lock https://registry.npmjs.org/hashish/-/hashish-0.0.4.tgz /Users/devinlynch/.npm/ec67f10f-js-org-hashish-hashish-0-0-4-tgz.lock
+170 verbose addRemoteTarball [ 'https://registry.npmjs.org/hashish/-/hashish-0.0.4.tgz',
+170 verbose addRemoteTarball   '6d60bc6ffaf711b6afd60e426d077988014e6554' ]
+171 info retry fetch attempt 1 at 22:11:05
+172 verbose fetch to= /var/folders/jr/18cmkg4s7vv4z6jfspklvphm0000gn/T/npm-1093--MPk4ItJ/1393643465346-0.8615048010833561/tmp.tgz
+173 http GET https://registry.npmjs.org/hashish/-/hashish-0.0.4.tgz
+174 error fetch failed https://registry.npmjs.org/hashish/-/hashish-0.0.4.tgz
+175 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+176 info retry fetch attempt 2 at 22:11:15
+177 verbose fetch to= /var/folders/jr/18cmkg4s7vv4z6jfspklvphm0000gn/T/npm-1093--MPk4ItJ/1393643465346-0.8615048010833561/tmp.tgz
+178 http GET https://registry.npmjs.org/hashish/-/hashish-0.0.4.tgz
+179 error fetch failed https://registry.npmjs.org/hashish/-/hashish-0.0.4.tgz
+180 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+181 info retry fetch attempt 3 at 22:12:15
+182 verbose fetch to= /var/folders/jr/18cmkg4s7vv4z6jfspklvphm0000gn/T/npm-1093--MPk4ItJ/1393643465346-0.8615048010833561/tmp.tgz
+183 http GET https://registry.npmjs.org/hashish/-/hashish-0.0.4.tgz
+184 error fetch failed https://registry.npmjs.org/hashish/-/hashish-0.0.4.tgz
+185 silly lockFile ec67f10f-js-org-hashish-hashish-0-0-4-tgz https://registry.npmjs.org/hashish/-/hashish-0.0.4.tgz
+186 silly lockFile ec67f10f-js-org-hashish-hashish-0-0-4-tgz https://registry.npmjs.org/hashish/-/hashish-0.0.4.tgz
+187 silly lockFile 2f8e09bc-hashish-0-0-4 hashish@0.0.4
+188 silly lockFile 2f8e09bc-hashish-0-0-4 hashish@0.0.4
+189 verbose about to build /Users/devinlynch/open-data/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/mysql
+190 info /Users/devinlynch/open-data/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/mysql unbuild
+191 info preuninstall mysql@0.9.4
+192 info uninstall mysql@0.9.4
+193 verbose false,/Users/devinlynch/open-data/node_modules,/Users/devinlynch/open-data/node_modules/connect-mysql-session/node_modules/sequelize/node_modules unbuild mysql@0.9.4
+194 info postuninstall mysql@0.9.4
+195 error Error: SELF_SIGNED_CERT_IN_CHAIN
+195 error     at SecurePair.<anonymous> (tls.js:1357:32)
+195 error     at SecurePair.EventEmitter.emit (events.js:92:17)
+195 error     at SecurePair.maybeInitFinished (tls.js:970:10)
+195 error     at CleartextStream.read [as _read] (tls.js:463:15)
+195 error     at CleartextStream.Readable.read (_stream_readable.js:320:10)
+195 error     at EncryptedStream.write [as _write] (tls.js:366:25)
+195 error     at doWrite (_stream_writable.js:221:10)
+195 error     at writeOrBuffer (_stream_writable.js:211:5)
+195 error     at EncryptedStream.Writable.write (_stream_writable.js:180:11)
+195 error     at write (_stream_readable.js:583:24)
+195 error     at flow (_stream_readable.js:592:7)
+195 error     at Socket.pipeOnReadable (_stream_readable.js:624:5)
+196 error If you need help, you may report this log at:
+196 error     <http://github.com/isaacs/npm/issues>
+196 error or email it to:
+196 error     <npm-@googlegroups.com>
+197 error System Darwin 12.5.0
+198 error command "node" "/usr/local/bin/npm" "update" "mysql"
+199 error cwd /Users/devinlynch/open-data
+200 error node -v v0.10.18
+201 error npm -v 1.3.8
+202 verbose exit [ 1, true ]

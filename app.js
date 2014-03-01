@@ -7,7 +7,9 @@ var express = require('express')
   , routes = require('./routes')
   , http = require('http')
   , path = require('path')
+  , db = require('./database')
 var app = express();
+var database = new db.RawSQLDatabase();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 5800);
@@ -30,6 +32,44 @@ app.configure('development', function(){
 
 app.get('/', function(req, res, next){
   routes.index(req, res, next);
+});
+
+app.get('/test', function(req, res, next){
+  database.createSubscribe({
+    email_address: "test@test.com",
+    dataset_id: 1
+  },
+  [{
+    value: "test"
+  }],
+  function(res, err) {
+    console.log('res: ' +res);
+  });
+});
+
+app.get('/unsubscribe', function(req, res){
+  var email = req.query.email;
+  var id = req.query.id;
+  if(!email || !id) {
+    res.send("A email and ID must be provided in order to unsubscribe");
+    return;
+  }
+
+  database.unsubscribe(email, id, function(err) {
+    if(err) {
+      res.send(err);
+    } else{
+      res.send("You are unsubscribed.")
+    }
+  });
+});
+
+app.get('/o/datasets', function(req, res, next){
+  database.getDatasets(function(err, datasets) {
+    if(err)
+      console.log(err);
+    res.send(datasets);
+  });
 });
 
 try{
