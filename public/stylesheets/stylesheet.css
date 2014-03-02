@@ -1,5 +1,5 @@
 
-@import url("http://fonts.googleapis.com/css?family=Inconsolata");
+@import url("http://fonts.googleapis.com/css?family=Audiowide");
 
 html,
 body,
@@ -97,15 +97,15 @@ a img {
  * background color as variables
  */
 body {
-  font-family: 'Inconsolata';
+  font-family: 'Audiowide';
   background-color: #faf9f0;
   color: #444;
 }
 header {
-  font-family: 'Inconsolata';
-  padding: 50px 10px;
+  font-family: 'Audiowide';
+  padding: 60px 0px;
   color: #201301;
-  font-size: 30px;
+  font-size: 38px;
   text-align: center;
 /*
    * Note the use of the `main-color`
@@ -156,8 +156,8 @@ input.text {
   box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
 }
 .sidebar .widget h1 {
-  font-family: 'Quicksand';
-  margin: 13px 10px 4px;
+  font-family: 'Audiowide';
+  margin: 13px 5px 4px;
   padding-bottom: 10px;
   border-bottom: 1px dotted #ddd;
   -webkit-border-radius: 2px 2px 0px 0px;
