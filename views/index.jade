@@ -4,16 +4,19 @@ block content
 
     center
           div(class="mainDiv", id="mainDiv") 
-          
-          p Select from the Recall List 
-          
+          p Image HERE 
+         div
+          p Select from the Recall List
           form(action="/start", method="post")
           select(name= "dataset") datalist 
           
           option(value="recall") Details
           
           form(action="/start", method="post")
+          input(type='text', name='email', value=email)
           select(name= "details") detaillist  
+         
+
           p Enter Your Email
           input(type='text', name='email', value=email)
           button(type="sumbit") Subscribe
