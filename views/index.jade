@@ -1,6 +1,19 @@
 extends layout
 
 block content
-	center
-		div(class="mainDiv", id="mainDiv")
-			p It worked!
+
+    center
+          div(class="mainDiv", id="mainDiv") 
+          
+          p Select from the Recall List 
+          
+          form(action="/start", method="post")
+          select(name= "dataset") datalist 
+          
+          option(value="recall") Details
+          
+          form(action="/start", method="post")
+          select(name= "details") detaillist  
+          p Enter Your Email
+          input(type='text', name='email', value=email)
+          button(type="sumbit") Subscribe
