@@ -72,8 +72,19 @@ app.get('/o/datasets', function(req, res, next){
   });
 });
 
+app.get('/searchTest', function(req, res, next){
+  database.search(2, [{inputId: 27, value: '0'}], function(err, result) {
+    if(err)
+      console.log(err);
+    res.send(result);
+  });
+});
+
 app.get('/search', function(req, res, next){
-  database.search(8, [{inputId: 12, value: 'foo'}], function(err, result) {
+  var datasetId = req.body.datasetId;
+  var assertions = req.body.assertions;
+
+  database.search(2, [{inputId: 27, value: '0'}], function(err, result) {
     if(err)
       console.log(err);
     res.send(result);

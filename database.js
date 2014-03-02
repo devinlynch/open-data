@@ -172,7 +172,7 @@ var RawSQLDatabase = function() {
 				"				where dr.dataset_id = ?" + 
 				"				and " + 
 				"					("+generateAssertionAndClauses(assertions)+
-				"					) limit 50) drinner" + 
+				"					) group by dr.dataset_record_id limit 50) drinner" + 
 				"				left join dataset_value dv on dv.dataset_record_id=drinner.drid "+
 				"	where c >= ?)";
 		console.log(query);
