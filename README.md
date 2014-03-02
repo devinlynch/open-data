@@ -4,7 +4,7 @@ Total Recall
 LIVE VERSION:
 http://ec2-54-81-232-7.compute-1.amazonaws.com/
 
-This is our submission for the Canadian Open Data Experience 2014 Hackathon.  There is also a repo called OpenDataJava which has the Java code for our server processors.  This repo contains the web server (node.js) code for displaying the GUI and for subscribing for notifications.
+This is our submission for the Canadian Open Data Experience 2014 Hackathon.  There is also a repo called OpenDataJava which has the Java code for our server processors.  This repo contains the web server (node.js) code for displaying the GUI and for subscribing for notifications.  Please note a lot of the time went into the back end processors rather than the GUI, hence the medicore design.
 
 About The App
 ----
@@ -20,7 +20,7 @@ Our Java processors run periodically and grab the data sets from the Government 
 
 What we didn't have time to finish
 ---
-On the server side we implemented searching for all of our data.  We did not have a chance to build it into the GUI though.  That would've been nice.  Also, we are pretty limited to how many emails can be sent out since we don't have access to a production SMTP server.  We also wanted to include a couple more data sets.
+On the server side we implemented searching for all of our data.  We did not have a chance to build it into the GUI though.  That would've been nice.  Also, we are pretty limited to how many emails can be sent out since we don't have access to a production SMTP server.  We also wanted to include a couple more data sets.  We also woudl like to drastically improve the GUI.
 
 
 What We Used
@@ -35,3 +35,8 @@ Screenshots:
 ---
 ![Alt text](/screenshots/Screen Shot 2014-03-02 at 3.41.22 PM.png)
 
+![Alt text](/screenshots/Screen Shot 2014-03-02 at 3.41.28 PM.png)
+
+![Alt text](/screenshots/Screen Shot 2014-03-02 at 3.41.49 PM.png)
+
+![Alt text](/screenshots/Screen Shot 2014-03-02 at 3.41.59 PM.png)
