@@ -128,6 +128,12 @@ var RawSQLDatabase = function() {
     						return;
     					}
 
+    					if(assertion['dataset_input_id'] === undefined) {
+    						console.log('dataset_input_id not defined');
+    						_callback("Error");
+    						return;
+    					}
+
     					persistSubscribeAssertion(assertion, _callback);
     				}, function(err) {
 						if(err) {
@@ -156,6 +162,57 @@ var RawSQLDatabase = function() {
 				callback();
 			}
 		});
+	}
+
+	this.search = function(datasetId, assertions, callback) {
+		var query = "(select dv.* from" + 
+				"	(SELECT dr.dataset_record_id as drid, count(*) as c FROM " + 
+				"				dataset_record dr " + 
+				"				left join dataset_value dv on dv.dataset_record_id=dr.dataset_record_id " + 
+				"				where dr.dataset_id = ?" + 
+				"				and " + 
+				"					("+generateAssertionAndClauses(assertions)+
+				"					) group by dr.dataset_record_id limit 50) drinner" + 
+				"				left join dataset_value dv on dv.dataset_record_id=drinner.drid "+
+				"	where c >= ?)";
+		console.log(query);
+		connection.query(query, [datasetId, assertions.length], function(err, results) {
+			if(err) {
+				console.log(err);
+				callback(err);
+				return;
+			}
+
+			var dataRecordMap = {};
+			for(var i in results) {
+				var res = results[i];
+				var resId = res['dataset_record_id'];
+				if(dataRecordMap[resId] === undefined) {
+					dataRecordMap[resId] = [];
+				}
+
+				dataRecordMap[resId][dataRecordMap[resId].length] = res;
+			}
+
+			console.log(dataRecordMap);
+			callback(err, dataRecordMap);
+		});
+
+	}
+
+	function generateAssertionAndClauses(assertions) {
+		var i=1;
+		var s = "";
+		for(var a in assertions) {
+			var ass = assertions[a];
+			s = s + "(dv.value = "+connection.escape(ass['value'])+" and dv.dataset_input_id = "+connection.escape(ass['inputId'])+") ";
+			if(i !== assertions.length) {
+				s = s + " OR ";
+			}
+			i++;
+		}
+
+		return s;
 	}
 }
 
