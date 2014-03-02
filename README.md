@@ -3,6 +3,8 @@ Total Recall
 
 LIVE VERSION:
 http://ec2-54-81-232-7.compute-1.amazonaws.com/
+JAVA REPO:
+https://github.com/JohnMarsh/OpenDataJava
 
 This is our submission for the Canadian Open Data Experience 2014 Hackathon.  There is also a repo called OpenDataJava which has the Java code for our server processors.  This repo contains the web server (node.js) code for displaying the GUI and for subscribing for notifications.  Please note a lot of the time went into the back end processors rather than the GUI, hence the medicore design.
 
