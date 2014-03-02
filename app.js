@@ -72,6 +72,14 @@ app.get('/o/datasets', function(req, res, next){
   });
 });
 
+app.get('/search', function(req, res, next){
+  database.search(8, [{inputId: 12, value: 'foo'}], function(err, result) {
+    if(err)
+      console.log(err);
+    res.send(result);
+  });
+});
+
 try{
 	http.createServer(app).listen(app.get('port'), function(){
 	  console.log("Express server listening on port " + app.get('port'));
