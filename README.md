@@ -1,6 +1,9 @@
 Total Recall
 =========
 
+LIVE VERSION:
+http://ec2-54-81-232-7.compute-1.amazonaws.com/
+
 This is our submission for the Canadian Open Data Experience 2014 Hackathon.  There is also a repo called OpenDataJava which has the Java code for our server processors.  This repo contains the web server (node.js) code for displaying the GUI and for subscribing for notifications.
 
 About The App
@@ -15,5 +18,20 @@ How It Works
 Our Java processors run periodically and grab the data sets from the Government of Canada website.  We then add any records of the data that are not already in our system to our database.  We then have a seperate processor which looks at users who have defined a mapping to receive notifications, and it matches that against new data in our database.  If the mapping holds to be true, we generate a email.  Everything is designed to be extremely dynamic.  A new dataset can be added with almost no code changes.  The only code that needs to be written is a custom method for parsing the data set since every data set has a different format.
 
 
+What we didn't have time to finish
+---
+On the server side we implemented searching for all of our data.  We did not have a chance to build it into the GUI though.  That would've been nice.  Also, we are pretty limited to how many emails can be sent out since we don't have access to a production SMTP server.  We also wanted to include a couple more data sets.
+
+
+What We Used
+---
+node.js
+Java
+MySQL
+Amazon EC2 and RDS
+
+
 Screenshots:
 ---
+![Alt text](/screenshots/Screen Shot 2014-03-02 at 3.41.22 PM.png)
+
