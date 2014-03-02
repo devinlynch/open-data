@@ -40,7 +40,7 @@ var RawSQLDatabase = function() {
 			},
 			appendDatasetInputs: function(_callback) {
 				var _datasets = [];
-				async.each(datasets, function(dataset) {
+				async.each(datasets, function(dataset, _callback) {
 					connection.query('select * from dataset_input where dataset_id = ?', [dataset["dataset_id"]], function(err, result) {
 						if(err || !result) {
 							if(err)
@@ -54,12 +54,14 @@ var RawSQLDatabase = function() {
 						}
 					});
 				}, function(err){
+					console.log(JSON.stringify(_datasets));
 					datasets=_datasets;
 				    _callback(err);
 				});
 			}
 		},
 		function(err, results){
+			console.log(datasets);
 			callback(err, datasets);
 		});
 	}

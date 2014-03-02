@@ -1,181 +1,326 @@
-
-@import url("http://fonts.googleapis.com/css?family=Inconsolata");
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-family: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
+/*////////*//*////////*//*////////*/
+/* Standards *//*////////*//*/////*/
+/*////////*//*////////*//*////////*/
 body {
-  line-height: 1;
-  color: #000;
-  background: #fff;
+    font-family: sans-serif;
+	background:#F59120;
+	height:100%;
+	width:100%;
 }
-ol,
-ul {
-  list-style: none;
+
+p{
+	margin: 0px;
 }
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle;
+
+a:link 
+{
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif
+	font-size: 13px;
+	color: #1181ea;
+	text-decoration:none;
 }
-caption,
-th,
-td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
+a:visited
+{
+	color: #1181ea;
+	text-decoration:none;
 }
-a img {
-  border: none;
+a:hover 
+{
+	color: #333;
 }
-/*
- * Store the main color and
- * background color as variables
- */
-body {
-  font-family: 'Inconsolata';
-  background-color: #faf9f0;
-  color: #444;
+a:active
+{
+	color: #00a6cf;
+	text-decoration:underline;
 }
-header {
-  font-family: 'Inconsolata';
-  padding: 50px 10px;
-  color: #201301;
-  font-size: 30px;
-  text-align: center;
-/*
-   * Note the use of the `main-color`
-   * variable and the `darken` function
-   */
-  background-color: #fab24d;
-  border-bottom: 1px solid #df1806;
+
+/*////////*//*////////*//*////////*/
+/* Main   *//*////////*//*////////*/
+/*////////*//*////////*//*////////*/
+
+.mainDiv{
+	text-align: center;
+	margin: 0px;
+	width:100%;
 }
-input.text {
-    background: white;
-    border: 1px solid #ffa853;
-    border-radius: 5px;
-    box-shadow: 0 0 5px 3px #ffa853;
-    color: #666;
-    float: left;
-    padding: 5px 10px;
-    width: 165px;
-    outline: none;
+
+.centeredInDiv{
+	text-align: center;
+	vertical-align: middle;
+    display: table-cell;	
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:13px;
+	cursor:default;
 }
-.container {
-  width: 500px;
-  margin: 50px auto;
-  overflow: hidden;
+
+.email-input{
+	width: 300px;
+	display: inline-block;
 }
-.main-content {
-  float: left;
-  width: 300px;
+
+.assertion-ass{
+	width: 50px;
+	display: inline-block;
+	margin: 2px;
 }
-.main-content p {
-  margin-bottom: 20px;
+
+.confusedDiv{
+	margin-top: 30px;
 }
-.sidebar {
-  float: left;
-  width: 200px;
+
+.aboutDiv{
+	display: none;
 }
-.sidebar .widget {
-/*
-     * Note the lack of vendor
-     * prefixes here. Nib will
-     * add them for us
-     */
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-  margin-left: 20px;
-  background-color: #faf9f0;
-  -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
-  box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
+
+.noTrackFoundDiv{
+	height:30px;
 }
-.sidebar .widget h1 {
-  font-family: 'Quicksand';
-  margin: 13px 10px 4px;
-  padding-bottom: 10px;
-  border-bottom: 1px dotted #ddd;
-  -webkit-border-radius: 2px 2px 0px 0px;
-  border-radius: 2px 2px 0px 0px;
-  margin-bottom: 10px;
+.noTrackFoundP{
+	display: none;
 }
-.sidebar .widget p {
-  font-size: 13px;
-  padding: 0px 10px;
-  margin-bottom: 10px;
+
+.mainSearch{
+	padding-top:5%;
 }
-p {
-  line-height: 1.8;
+
+.trackDiv{
+	display: none;
+	background-color: white;
+	width: 600px;
+	height: 100%;
+	box-shadow: 10px 10px 5px #000;
+	border-radius:25px;
+	padding-bottom: 20px;
 }
-footer {
-  width: 500px;
-  margin: 50px auto;
-  border-top: 1px dotted #ccc;
-  padding-top: 5px;
-  font-size: 13px;
+
+
+
+/*////////*//*////////*//*////////*/
+/* Footer *//*////////*//*////////*/
+/*////////*//*////////*//*////////*/
+.footer{
+    position: relative;
+	margin-top: -150px;
+	height: 150px;
+	clear:both;
+	padding-top:20px;
+	color:#fff;
+}
+
+/*////////*//*////////*//*////////*/
+/* Header *//*////////*//*////////*/
+/*////////*//*////////*//*////////*/
+.leftTopBar{
+	width:82%;
+	margin: 0px;
+	float:left;
+}
+
+.middleTopBar{
+	width:56%;
+	margin: 0px;
+	float: left;
+	text-align: left;
+}
+
+.rightTopBar{
+	width:18%;
+	margin-left:auto;
+	text-align: center;
+}
+
+select#dataset-dropdown{
+	width: 400px;
+	display: inline-block;
+}
+
+.assertion-input{
+	width: 300px;
+	display: inline-block;
+	margin: 2px;
+}
+
+.assertion-input-value{
+	width: 150px;
+	display: inline-block;
+	margin: 2px;
+}
+
+.afterdataset{
+	display: none;
+}
+
+.success{
+	display: none;
+}
+
+.header{
+    display: inline-block;
+	width:100%;
+	vertical-align: middle;
+	background-color: #E0841B;
+	padding-left: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	cursor: default;
+	height: 30px;
+}
+
+.logoTitle{
+	margin:0px;
+	padding: 0px;
+	float: left;
+}
+
+.downImage{
+	height:15px;
+	margin-right: 3px;
+	float: left;
+	display: none;
+}
+
+.dropdown{
+	width: 100px;
+	height: 100px;
+	margin-top: -20px;
+	float: none;
+	position: fixed;
+	background-color: #E0841B;
+	cursor: default;
+	display: none;
+}
+
+.loadingImg{
+	display: none;
+	height: 20px;
+	width: 20px;
+	padding: 0px;
+	margin-left: 4px;
+	background-image: url('/public/images/ajax-loader-header.gif');
+    webkit-background-size: cover;
+    moz-background-size: cover;
+    o-background-size: cover;
+    background-size: cover;
+	float: left;
+}
+
+
+/***********************
+**
+** Track Update
+**
+***********************/
+
+.updateItem{
+	background-color: #f3eeee;
+	width: 600px;
+	margin-bottom: 3px;
+	text-align: left;
+}
+
+.updateItem p{
+	display: inline;
+}
+
+.topTrackItemBar{
+	background-color: #E3E3E3;
+	width: 100%;
+	height: 20px;
+	font-size: 9pt;
+	margin:0;
+}
+
+.topTrackItemBar .left{
+	width:50%%;
+	float: left;
+	height:20px;
+	line-height: 20px;
+}
+
+.topTrackItemBar .right{
+	width:50%;
+	float: left;
+	text-align: right;
+	height:20px;
+	line-height: 20px;
+}
+
+.topTrackItemBar .left .trackNumber{
+	margin-left: 4px;
+}
+
+.topTrackItemBar .right .trackDate{
+	margin-right: 4px;
+}
+
+.innerUpdateItem{
+	margin-bottom: 7px;
+}
+
+.updateItem .status{
+	margin: 10px;	
+}
+
+.updateItem .actions{
+	margin: 10px;
+	font-size: 9pt;
+}
+
+.updateItem .innerUpdateItem .status{
+	font-size: 11pt;
+
+}
+
+.updateItem .actions a{
+	color: #000000;
+
+}
+
+.actionsContainter{
+	width: 590px;
+	height: 20px;
+	margin-bottom: 0;
+}
+
+.actionsContainter .left{
+	float:left;
+	width:465px;
+	height:20px;
+	line-height: 20px;
+}
+
+.actionsContainter .right{
+	float: left;
+	width: 125px;
+	height: 20px;
+	text-align: right;
+}
+
+.actionButton{
+	text-align: center;
+	color: white;
+	background-color: #54acc3;
+	height: 20px;
+	float: left;
+	margin-right: 5px;
+	cursor: default;
+	line-height: 20px;
+}
+
+.commentButton{
+	width: 65px;
+}
+
+.likeButton{
+	width: 50px;
+}
+
+.updateItem .bottomSpacer{
+	width:100%;
+	height:1px;
+}
+
+/* changed to dusplay:none if user is not logged in */
+.loggedInAction{
+	display: none;
 }

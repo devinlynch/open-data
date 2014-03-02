@@ -1,22 +1,85 @@
-extends layout
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/stylesheet.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/stylesheet.css')
 
-block content
+    script(src='/public/javascripts/jquery-1.7.1.min.js')
+    script(src='/stylesheets/bootstrap/js/bootstrap.min.js')
+    script(src='/public/javascripts/main.js')
+    script(src='/public/javascripts/async.js')
+    script
+      var datasets = !{JSON.stringify(variable.datasets)};
+      openData.initializeIndex(datasets);
 
+  body
+    div(class="header")
+      div(class="leftTopBar", id="leftTopBar")
+        img(src="/public/images/small_arrow_down.png", class="downImage", id="downImage")
+        h4(class="logoTitle")= "total_recall"
+        div(style="padding:0px;height:32px;width:32px;float:left;")
+            div(id="loadingImg", class="loadingImg")
+        div(class="dropdown", id="dropdown")
+          p sdsadas
     center
-          div(class="mainDiv", id="mainDiv") 
-          p Image HERE 
-         div
-          p Select from the Recall List
-          form(action="/start", method="post")
-          select(name= "dataset") datalist 
-          
-          option(value="recall") Details
-          
-          form(action="/start", method="post")
-          input(type='text', name='email', value=email)
-          select(name= "details") detaillist  
-         
-
-          p Enter Your Email
-          input(type='text', name='email', value=email)
-          button(type="sumbit") Subscribe
+    div(class="mainDiv", id="mainDiv")
+      div(id="searchDiv")
+        div(class="mainSearch")
+          h3 Pick the data set
+          div.control-group.input-append
+            select(class='form-control', id='dataset-dropdown')
+              option(value='one') Select...
+        div(class="afterdataset")
+          div(class="assertions")
+            br
+            h3 Pick the notification triggers
+            div(class="assertion")
+              select(class='form-control assertion-input')
+                  option(value='one') Select...
+              select(class='form-control assertion-ass')
+                  option(value='0') =
+              input(class='form-control assertion-input-value', placeholder='Value')
+              span(class="glyphicon glyphicon-plus add-input")
+          div(class="subscribe")
+            br
+            h3 Enter your email address
+            div(class="email")
+              input(class='form-control email-input', placeholder='Email')
+              br
+              br
+              button(type="submit", class="btn btn-default subscribe-submit") Subscribe
+        div(class="confusedDiv")
+          p confused?  <a href="javascript: confused()">click here</a> to learn more
+      div(class="success")
+        br
+        br
+        br
+        p You are now subscribed!  You will receive notifications by email once changes that meet yoru criteria occur.
+      center
+        div(id="trackDiv", class="trackDiv")
+          h3(id="trackTitle", class="trackTitle")
+          b(id="userTitle", class="userTitle")
+          b(id="completionTitle")
+          p(id="completionTime", class="completionTime")
+          b(id="currentStatusTitle") Current Status:
+          p(id="currentStatus", class="currentStatus")
+          div(class="updatesContainer", id="updatesContainer")
+    div(class="aboutDiv", id="aboutDiv", style="text-align:center;width:100%;")
+      h2 about
+      p This tool allows you to subscribe to changes in data sets from the Government of Canada
+      br 
+      a(href="javascript:unconfuse()") back
+    script
+      function confused(){
+        $('#mainDiv').fadeOut(function(){
+          $('#aboutDiv').fadeIn();
+        });
+      }
+      function unconfuse(){
+        $('#aboutDiv').fadeOut(function(){
+          $('#mainDiv').fadeIn();
+        });
+      }

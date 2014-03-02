@@ -84,10 +84,22 @@ app.get('/search', function(req, res, next){
   var datasetId = req.body.datasetId;
   var assertions = req.body.assertions;
 
-  database.search(2, [{inputId: 27, value: '0'}], function(err, result) {
+  database.search(datasetId, assertions, function(err, result) {
     if(err)
       console.log(err);
     res.send(result);
+  });
+});
+
+app.post('/subscribe', function(req, res, next){
+  var subscribe = req.body.subscribe;
+  var assertions = req.body.assertions;
+
+  database.createSubscribe(subscribe, assertions, function(err, result) {
+    var returnObject = {
+      error: err
+    }
+    res.send(returnObject);
   });
 });
 
