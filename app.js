@@ -12,7 +12,7 @@ var app = express();
 var database = new db.RawSQLDatabase();
 
 app.configure(function(){
-  app.set('port', process.env.PORT || 5800);
+  app.set('port', process.env.PORT || 80);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon());
@@ -32,6 +32,10 @@ app.configure('development', function(){
 
 app.get('/', function(req, res, next){
   routes.index(req, res, next);
+});
+
+app.get('/licence', function(req, res, next){
+  routes.licence(req, res, next);
 });
 
 app.get('/test', function(req, res, next){

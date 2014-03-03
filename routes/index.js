@@ -8,3 +8,7 @@ exports.index = function(req, res){
 	    res.render("index.jade", {variable: {datasets: datasets}});	
 	  });
 };
+
+exports.licence = function(req, res){
+	res.render("licence.jade", {});	
+};

@@ -1,14 +1,25 @@
 doctype 5
 html
-    head
-        title #{title} - TOTAL RECALL
-        link(rel='stylesheet', href='/stylesheets/stylesheet.css')
-        link(rel='stylesheet', href='/stylesheets/bootstrap/css/bootstrap.min.css')
-        link(rel='stylesheet', href='/stylesheets/bootstrap/css/bootstrap-theme.min.css')
-        script(src='/stylesheets/bootstrap/js/bootstrap.min.js')
-   
-    header
-      h1 TOTAL RECALL
-        div(class="header")
-        block content
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/stylesheet.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/stylesheet.css')
+
+    script(src='/public/javascripts/jquery-1.7.1.min.js')
+    script(src='/stylesheets/bootstrap/js/bootstrap.min.js')
+    script(src='/public/javascripts/main.js')
+    script(src='/public/javascripts/async.js')
+
+  body
+    div(class="header")
+      div(class="leftTopBar", id="leftTopBar")
+        h4(class="logoTitle")= "total_recall" 
+
+        div(class="btn-group btn-group-xs", style="margin-left: 10px;")
+            button(type="button", class="btn btn-warning navbtn", id="homebtn") home
+            button(type="button", class="btn btn-warning navbtn", id="licencebtn") licence
+    center
+    block content
        

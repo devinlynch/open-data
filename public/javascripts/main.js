@@ -4,7 +4,7 @@ OpenData = function() {
 	this.dataSets = [];
 	this.dataSetMap = {};
 	$(function() {
-		for(var i in datasets) {
+		for(var i in that.datasets) {
 			var ds = that.datasets[i];
 			that.dataSetMap[ds.dataset_id] = ds;
 			console.log(ds);
@@ -187,4 +187,27 @@ $(function() {
 	$('.subscribe-submit').on('click', function() {
 		openData.submit();
 	});
+
+	$('.backBtn').on('click', function() {
+		unconfuse();
+	});
+
+	$('#homebtn').on('click', function() {
+		window.location = "/";
+	});
+
+	$('#licencebtn').on('click', function() {
+		window.location = "/licence";
+	});
 });
+
+function confused(){
+	$('#mainDiv').fadeOut(function(){
+	  $('#aboutDiv').fadeIn();
+	});
+}
+function unconfuse(){
+  $('#aboutDiv').fadeOut(function(){
+     $('#mainDiv').fadeIn();
+  });
+}

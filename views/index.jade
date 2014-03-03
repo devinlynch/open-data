@@ -1,85 +1,83 @@
-doctype 5
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/stylesheet.css')
-    link(rel='stylesheet', href='/stylesheets/bootstrap/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/stylesheets/bootstrap/css/bootstrap-theme.min.css')
-    link(rel='stylesheet', type='text/css', href='stylesheets/stylesheet.css')
-
-    script(src='/public/javascripts/jquery-1.7.1.min.js')
-    script(src='/stylesheets/bootstrap/js/bootstrap.min.js')
-    script(src='/public/javascripts/main.js')
-    script(src='/public/javascripts/async.js')
-    script
-      var datasets = !{JSON.stringify(variable.datasets)};
-      openData.initializeIndex(datasets);
-
-  body
-    div(class="header")
-      div(class="leftTopBar", id="leftTopBar")
-        img(src="/public/images/small_arrow_down.png", class="downImage", id="downImage")
-        h4(class="logoTitle")= "total_recall"
-        div(style="padding:0px;height:32px;width:32px;float:left;")
-            div(id="loadingImg", class="loadingImg")
-        div(class="dropdown", id="dropdown")
-          p sdsadas
+extends layout
+block content
+  script
+    var datasets = !{JSON.stringify(variable.datasets)};
+    openData.initializeIndex(datasets);
+    $(function() {
+      $('#homebtn').addClass('active');
+    });
+  div(class="mainDiv", id="mainDiv")
+    div(id="searchDiv")
+      div(class="mainSearch")
+        h3 Pick the data set
+        div.control-group.input-append
+          select(class='form-control', id='dataset-dropdown')
+            option(value='one') Select...
+      div(class="afterdataset")
+        div(class="assertions")
+          br
+          h3 Pick the notification triggers
+          div(class="assertion")
+            select(class='form-control assertion-input')
+                option(value='one') Select...
+            select(class='form-control assertion-ass')
+                option(value='0') =
+            input(class='form-control assertion-input-value', placeholder='Value')
+            span(class="glyphicon glyphicon-plus add-input")
+        div(class="subscribe")
+          br
+          h3 Enter your email address
+          div(class="email")
+            input(class='form-control email-input', placeholder='Email')
+            br
+            br
+            button(type="submit", class="btn btn-default subscribe-submit") Subscribe
+      div(class="confusedDiv")
+        p confused?  <a href="javascript: confused()">click here</a> to learn more
+    div(class="success ")
+      br
+      br
+      br
+      div(class="alert alert-success")
+        p You are now subscribed!  You will receive notifications by email once changes that meet your criteria occur.
     center
-    div(class="mainDiv", id="mainDiv")
-      div(id="searchDiv")
-        div(class="mainSearch")
-          h3 Pick the data set
-          div.control-group.input-append
-            select(class='form-control', id='dataset-dropdown')
-              option(value='one') Select...
-        div(class="afterdataset")
-          div(class="assertions")
-            br
-            h3 Pick the notification triggers
-            div(class="assertion")
-              select(class='form-control assertion-input')
-                  option(value='one') Select...
-              select(class='form-control assertion-ass')
-                  option(value='0') =
-              input(class='form-control assertion-input-value', placeholder='Value')
-              span(class="glyphicon glyphicon-plus add-input")
-          div(class="subscribe")
-            br
-            h3 Enter your email address
-            div(class="email")
-              input(class='form-control email-input', placeholder='Email')
-              br
-              br
-              button(type="submit", class="btn btn-default subscribe-submit") Subscribe
-        div(class="confusedDiv")
-          p confused?  <a href="javascript: confused()">click here</a> to learn more
-      div(class="success")
-        br
-        br
-        br
-        p You are now subscribed!  You will receive notifications by email once changes that meet yoru criteria occur.
-      center
-        div(id="trackDiv", class="trackDiv")
-          h3(id="trackTitle", class="trackTitle")
-          b(id="userTitle", class="userTitle")
-          b(id="completionTitle")
-          p(id="completionTime", class="completionTime")
-          b(id="currentStatusTitle") Current Status:
-          p(id="currentStatus", class="currentStatus")
-          div(class="updatesContainer", id="updatesContainer")
-    div(class="aboutDiv", id="aboutDiv", style="text-align:center;width:100%;")
-      h2 about
-      p This tool allows you to subscribe to changes in data sets from the Government of Canada
-      br 
-      a(href="javascript:unconfuse()") back
-    script
-      function confused(){
-        $('#mainDiv').fadeOut(function(){
-          $('#aboutDiv').fadeIn();
-        });
-      }
-      function unconfuse(){
-        $('#aboutDiv').fadeOut(function(){
-          $('#mainDiv').fadeIn();
-        });
-      }
+      div(id="trackDiv", class="trackDiv")
+        h3(id="trackTitle", class="trackTitle")
+        b(id="userTitle", class="userTitle")
+        b(id="completionTitle")
+        p(id="completionTime", class="completionTime")
+        b(id="currentStatusTitle") Current Status:
+        p(id="currentStatus", class="currentStatus")
+        div(class="updatesContainer", id="updatesContainer")
+  div(class="aboutDiv jumbotron", id="aboutDiv", style="")
+    h1 About
+    p This tool allows you to subscribe to changes in data sets from the Government of Canada.  Only a few data sets are supported for now however we plan to implement many more in the near future.
+    br 
+    h2 How it Works
+    br
+    p You specify the data set (e.g. border wait times) which you would like to be notified about.  You then specify under what conditions we should update you once there are future additions to the data set.  You then give us your email address so that we can notify you.
+    br
+    h2 Example
+    br
+    p  Let's say I am looking to travel from Ottawa to the United States.  I am not a fan of waiting at the border crossing for very long so I want to know whenenver the line at the Cornwall border does not have any delays.
+    br
+    h4 Steps:
+    p First I would choose "Border Wait Times" from the data set dropdown
+    img(src="/images/screen1.png")
+    br
+    br
+    p Now I want to specify a notification trigger for whenever the wait time going to the U.S. is 10 minutes or less.  I choose "Travellers Flow - U.S. bound (Minutes)", make the comparison to be "<=" and specify the value as 10.
+    img(src="/images/screen2.png")
+    br
+    br
+    p Now I want to specify that I only want updates for the Cornwall Customs Office.  I press the "+" in order to add a new trigger.  I choose "Customs Office", make the comparison "=" and make the value "Cornwall".
+    img(src="/images/screen3.png")
+    br
+    br
+    p Lastly, I specify my email address where I want the notifications to be triggered to, and I press submit.  I will now receive a notification email whenever the wait time at Cornwall is less than or equal to 10 minutes.
+    img(src="/images/screen4.png")
+    br
+    div(class="goBack")
+      button(type="button", class="btn btn-default btn-sm backBtn") 
+        span(class="glyphicon glyphicon-chevron-left")&nbsp;back
+    
