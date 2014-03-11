@@ -2,7 +2,7 @@ Total Recall
 =========
 
 LIVE VERSION:
-http://ec2-54-81-232-7.compute-1.amazonaws.com/
+http://suchteam.ca
 
 JAVA REPO:
 https://github.com/JohnMarsh/OpenDataJava
